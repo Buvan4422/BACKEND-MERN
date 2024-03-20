@@ -6,15 +6,15 @@ post http://localhost:4000/user-api/user
 Content-Type:  application/json
 
 {
-    "userId": 512,
-    "username": "Nireekshan",
-    "age": 23,
+    "userId": 532,
+    "username": "AB1P",
+    "age": 32,
     "marks": [
-        90,
-        92,34,45
+        701,
+        912,134,415
     ],
     "address": {
-       "city": "Vijayawada"
+       "city": "Hy1d"
     }
 }
 
@@ -23,10 +23,18 @@ put http://localhost:4000/user-api/user
 Content-Type: application/json
 
 {
-    "id":201,
-    "name":"charan"
+    "userId": 532,
+    "username": "Buvan",
+    "age": 33,
+    "marks": [
+        70,
+        92,34,45
+    ],
+    "address": {
+       "city": "Hyd"
+    }
 }
 
 
 ### delete
-delete http://localhost:4000/user-api/user
+delete http://localhost:4000/user-api/user/532
