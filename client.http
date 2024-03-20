@@ -6,8 +6,16 @@ post http://localhost:4000/user-api/user
 Content-Type:  application/json
 
 {
-    "id":301,
-    "name":"pavan"
+    "userId": 512,
+    "username": "Nireekshan",
+    "age": 23,
+    "marks": [
+        90,
+        92,34,45
+    ],
+    "address": {
+       "city": "Vijayawada"
+    }
 }
 
 ### put

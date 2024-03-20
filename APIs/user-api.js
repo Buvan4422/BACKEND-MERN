@@ -1,27 +1,29 @@
 //create express Userapp(mini route)
 const express = require('express');
 const Userapp = express.Router();
-
-//assign port number
-
 Userapp.use(express.json());
-let users = [
-  { id: 200, name: 'Buvan' },
-  { id: 201, name: 'John Doe' },
-];
 
+//create API(routes)
+
+//route to read users
 Userapp.get('/', (req, res) => {
   res.redirect('/users');
 });
 
-Userapp.get('/users', (req, res) => {
-  res.send({ message: 'All users', payload: users });
+Userapp.get('/users', async (req, res) => {
+  const userCollection = req.app.get('userCollection');
+
+  let usersList = await userCollection.find().toArray();
+
+  res.send({ message: 'your data', payload: usersList });
 });
 
-Userapp.post('/user', (req, res) => {
+Userapp.post('/user', async (req, res) => {
+  const userCollection = req.app.get('userCollection');
   let newUser = req.body;
-  users.push(newUser);
-  res.send({ message: 'New user  created', payload: newUser });
+
+  await userCollection.insertOne(newUser);
+  res.send({ message: 'New user  created' });
 });
 
 Userapp.put('/user', (req, res) => {
