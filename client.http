@@ -1,0 +1,24 @@
+### get
+get http://localhost:4000/user-api/users
+
+### post
+post http://localhost:4000/user-api/user
+Content-Type:  application/json
+
+{
+    "id":301,
+    "name":"pavan"
+}
+
+### put
+put http://localhost:4000/user-api/user
+Content-Type: application/json
+
+{
+    "id":201,
+    "name":"charan"
+}
+
+
+### delete
+delete http://localhost:4000/user-api/user
