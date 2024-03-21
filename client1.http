@@ -10,9 +10,10 @@ post http://localhost:4000/product-api/product
 Content-Type:  application/json
 
 {
-    "pId": 106,
-    "pName": "Laptop",
-    "pBrand": "ASUS"
+    "prodId": 101,
+    "prodName": "toothBrush",
+    "prodBrand": "oral b",
+    "prodPrice": 100
 }
 
 ### put
@@ -20,10 +21,11 @@ put http://localhost:4000/product-api/product
 Content-Type: application/json
 
 {
-    "pId": 101,
-    "pName": "Laptop",
-    "pBrand": "Macbook"
+    "prodId": 101,
+    "prodName": "Laptop",
+    "prodBrand": "Macbook",
+    "prodPrice": 99
 }
 
 ### delete
-delete http://localhost:4000/product-api/product/102
+delete http://localhost:4000/product-api/product/101

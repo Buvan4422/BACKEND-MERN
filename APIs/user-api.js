@@ -9,6 +9,7 @@ Userapp.use((req, res, next) => {
   userCollection = req.app.get('userCollection');
   next();
 });
+
 //route to read users
 Userapp.get('/', (req, res) => {
   res.redirect('/users');
